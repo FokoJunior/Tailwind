@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Les Bases de Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .code-example {
+            background: #1e293b;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 font-semibold">← Retour au menu</a>
+            <h1 class="text-xl font-bold text-gray-800">01 - Les Bases</h1>
+            <a href="02-layout.html" class="text-blue-600 hover:text-blue-800 font-semibold">Suivant →</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12 max-w-5xl">
+        
+        <!-- Introduction -->
+        <section class="mb-16">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">Bienvenue dans Tailwind CSS</h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Tailwind CSS est un framework CSS <strong>utility-first</strong> qui vous permet de construire des interfaces modernes directement dans votre HTML.
+            </p>
+            
+            <div class="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 border-l-4 border-blue-500">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">🎯 Ce que vous allez apprendre</h3>
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center gap-3">
+                        <span class="text-green-500 text-xl">✓</span>
+                        L'approche utility-first et pourquoi elle est puissante
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-green-500 text-xl">✓</span>
+                        Les classes de couleur, d'espacement et de typographie
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-green-500 text-xl">✓</span>
+                        Comment composer des designs complexes avec des utilitaires simples
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-green-500 text-xl">✓</span>
+                        Les conventions de nommage et la logique de Tailwind
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Utility-First Concept -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">📦 L'approche Utility-First</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-red-50 rounded-lg p-6 border-2 border-red-200">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">❌ CSS Traditionnel</h3>
+                    <div class="code-example rounded-lg p-4 text-sm text-gray-300 font-mono overflow-x-auto">
+                        <pre>&lt;div class="alert-box"&gt;
+  Message important
+&lt;/div&gt;
+
+&lt;style&gt;
+.alert-box {
+  background-color: #fef2f2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #991b1b;
+}
+&lt;/style&gt;</pre>
+                    </div>
+                    <p class="mt-4 text-sm text-red-700">Vous devez inventer des noms de classes et écrire du CSS séparé.</p>
+                </div>
+
+                <div class="bg-green-50 rounded-lg p-6 border-2 border-green-200">
+                    <h3 class="text-xl font-bold text-green-800 mb-4">✅ Tailwind (Utility-First)</h3>
+                    <div class="code-example rounded-lg p-4 text-sm text-gray-300 font-mono overflow-x-auto">
+                        <pre>&lt;div class="bg-red-50 p-4 rounded-lg text-red-800"&gt;
+  Message important
+&lt;/div&gt;</pre>
+                    </div>
+                    <p class="mt-4 text-sm text-green-700">Les classes utilitaires décrivent exactement ce qu'elles font. Pas de CSS séparé!</p>
+                </div>
+            </div>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-lg">
+                <p class="text-gray-800">
+                    <strong>💡 L'avantage clé:</strong> Vous écrivez moins de CSS personnalisé, vous réutilisez des patterns, 
+                    et votre design reste cohérent automatiquement.
+                </p>
+            </div>
+        </section>
+
+        <!-- Colors -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">🎨 Les Couleurs</h2>
+            <p class="text-gray-700 mb-6">Tailwind propose une palette de couleurs complète avec des nuances de 50 à 950.</p>
+            
+            <!-- Color Examples -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-blue-500 text-white p-4 rounded-lg text-center font-semibold">
+                    bg-blue-500
+                </div>
+                <div class="bg-purple-600 text-white p-4 rounded-lg text-center font-semibold">
+                    bg-purple-600
+                </div>
+                <div class="bg-green-400 text-white p-4 rounded-lg text-center font-semibold">
+                    bg-green-400
+                </div>
+                <div class="bg-red-700 text-white p-4 rounded-lg text-center font-semibold">
+                    bg-red-700
+                </div>
+            </div>
+
+            <!-- Color Scale -->
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Échelle de couleur (exemple avec Indigo)</h3>
+            <div class="space-y-2 mb-8">
+                <div class="bg-indigo-50 p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-50</span>
+                    <span class="text-gray-600 text-sm">Plus clair</span>
+                </div>
+                <div class="bg-indigo-100 p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-100</span>
+                </div>
+                <div class="bg-indigo-200 p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-200</span>
+                </div>
+                <div class="bg-indigo-300 p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-300</span>
+                </div>
+                <div class="bg-indigo-400 text-white p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-400</span>
+                </div>
+                <div class="bg-indigo-500 text-white p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-500</span>
+                    <span class="text-sm">Par défaut</span>
+                </div>
+                <div class="bg-indigo-600 text-white p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-600</span>
+                </div>
+                <div class="bg-indigo-700 text-white p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-700</span>
+                </div>
+                <div class="bg-indigo-800 text-white p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-800</span>
+                </div>
+                <div class="bg-indigo-900 text-white p-3 rounded flex justify-between items-center">
+                    <span class="font-mono text-sm">bg-indigo-900</span>
+                    <span class="text-sm">Plus foncé</span>
+                </div>
+            </div>
+
+            <!-- Color Properties -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Propriétés de couleur</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm flex-shrink-0 w-40">text-{color}-{shade}</code>
+                        <span class="text-gray-600">Couleur du texte</span>
+                        <span class="text-blue-600 ml-auto">Exemple: text-blue-600</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm flex-shrink-0 w-40">bg-{color}-{shade}</code>
+                        <span class="text-gray-600">Couleur de fond</span>
+                        <span class="bg-green-100 px-2 py-1 rounded ml-auto">Exemple: bg-green-100</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm flex-shrink-0 w-40">border-{color}-{shade}</code>
+                        <span class="text-gray-600">Couleur de bordure</span>
+                        <span class="border-2 border-purple-500 px-2 py-1 rounded ml-auto">Exemple: border-purple-500</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">📏 L'espacement (Spacing)</h2>
+            <p class="text-gray-700 mb-6">
+                Tailwind utilise une échelle d'espacement basée sur des multiples de 0.25rem (4px).
+            </p>
+
+            <!-- Spacing Scale -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Échelle d'espacement</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm w-20">p-0</code>
+                        <div class="bg-blue-100 p-0 border-2 border-blue-500">
+                            <div class="bg-blue-500 text-white px-2">0</div>
+                        </div>
+                        <span class="text-gray-600 text-sm">= 0px</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm w-20">p-1</code>
+                        <div class="bg-blue-100 p-1 border-2 border-blue-500">
+                            <div class="bg-blue-500 text-white px-2">1</div>
+                        </div>
+                        <span class="text-gray-600 text-sm">= 0.25rem (4px)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm w-20">p-2</code>
+                        <div class="bg-blue-100 p-2 border-2 border-blue-500">
+                            <div class="bg-blue-500 text-white px-2">2</div>
+                        </div>
+                        <span class="text-gray-600 text-sm">= 0.5rem (8px)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm w-20">p-4</code>
+                        <div class="bg-blue-100 p-4 border-2 border-blue-500">
+                            <div class="bg-blue-500 text-white px-2">4</div>
+                        </div>
+                        <span class="text-gray-600 text-sm">= 1rem (16px)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm w-20">p-8</code>
+                        <div class="bg-blue-100 p-8 border-2 border-blue-500">
+                            <div class="bg-blue-500 text-white px-2">8</div>
+                        </div>
+                        <span class="text-gray-600 text-sm">= 2rem (32px)</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <code class="bg-gray-100 px-3 py-1 rounded font-mono text-sm w-20">p-16</code>
+                        <div class="bg-blue-100 p-16 border-2 border-blue-500">
+                            <div class="bg-blue-500 text-white px-2">16</div>
+                        </div>
+                        <span class="text-gray-600 text-sm">= 4rem (64px)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spacing Types -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Padding (Espacement intérieur)</h3>
+                    <div class="space-y-2 text-sm">
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">p-4</code> = padding de tous les côtés</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">px-4</code> = padding horizontal (left + right)</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">py-4</code> = padding vertical (top + bottom)</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">pt-4</code> = padding-top uniquement</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">pb-4</code> = padding-bottom uniquement</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">pl-4</code> = padding-left uniquement</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">pr-4</code> = padding-right uniquement</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Margin (Espacement extérieur)</h3>
+                    <div class="space-y-2 text-sm">
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">m-4</code> = margin de tous les côtés</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">mx-4</code> = margin horizontal (left + right)</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">my-4</code> = margin vertical (top + bottom)</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">mt-4</code> = margin-top uniquement</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">mb-4</code> = margin-bottom uniquement</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">ml-4</code> = margin-left uniquement</p>
+                        <p><code class="bg-gray-100 px-2 py-1 rounded">mr-4</code> = margin-right uniquement</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Practical Example -->
+            <div class="mt-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Exemple pratique</h3>
+                <div class="bg-white rounded-lg p-6 mb-4">
+                    <div class="bg-blue-500 text-white p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">Boîte avec padding</h4>
+                        <p class="text-sm">Le texte a de l'espace autour de lui grâce au padding</p>
+                    </div>
+                </div>
+                <code class="block bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto">
+                    &lt;div class="bg-blue-500 text-white p-6 rounded-lg"&gt;...&lt;/div&gt;
+                </code>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">✍️ La Typographie</h2>
+            
+            <!-- Font Size -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Taille de texte</h3>
+                <div class="space-y-4">
+                    <div class="text-xs">text-xs - Très petit texte</div>
+                    <div class="text-sm">text-sm - Petit texte</div>
+                    <div class="text-base">text-base - Texte normal (16px par défaut)</div>
+                    <div class="text-lg">text-lg - Texte large</div>
+                    <div class="text-xl">text-xl - Texte extra large</div>
+                    <div class="text-2xl">text-2xl - Titre niveau 2</div>
+                    <div class="text-3xl">text-3xl - Titre niveau 3</div>
+                    <div class="text-4xl">text-4xl - Grand titre</div>
+                    <div class="text-5xl">text-5xl - Très grand titre</div>
+                </div>
+            </div>
+
+            <!-- Font Weight -->
+            <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Épaisseur de police</h3>
+                <div class="space-y-2">
+                    <div class="font-thin">font-thin - Texte très fin (100)</div>
+                    <div class="font-light">font-light - Texte léger (300)</div>
+                    <div class="font-normal">font-normal - Texte normal (400)</div>
+                    <div class="font-medium">font-medium - Texte moyen (500)</div>
+                    <div class="font-semibold">font-semibold - Texte semi-gras (600)</div>
+                    <div class="font-bold">font-bold - Texte gras (700)</div>
+                    <div class="font-extrabold">font-extrabold - Texte très gras (800)</div>
+                    <div class="font-black">font-black - Texte noir (900)</div>
+                </div>
+            </div>
+
+            <!-- Text Styling -->
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Style de texte</h3>
+                <div class="space-y-3">
+                    <div class="italic">italic - Texte en italique</div>
+                    <div class="underline">underline - Texte souligné</div>
+                    <div class="line-through">line-through - Texte barré</div>
+                    <div class="uppercase">uppercase - Texte en majuscules</div>
+                    <div class="lowercase">LOWERCASE - Texte en minuscules</div>
+                    <div class="capitalize">capitalize - Première lettre en majuscule</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Practical Exercise -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl p-8 text-white">
+                <h2 class="text-3xl font-bold mb-6">🎯 Exercice Pratique</h2>
+                <p class="text-lg mb-6">Créez une carte de profil utilisateur en utilisant uniquement les classes Tailwind que vous avez apprises.</p>
+                
+                <div class="bg-white text-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Consignes:</h3>
+                    <ul class="space-y-2">
+                        <li>✓ Utilisez des couleurs (bg-*, text-*)</li>
+                        <li>✓ Ajoutez du padding et des marges</li>
+                        <li>✓ Variez les tailles de texte</li>
+                        <li>✓ Utilisez différentes épaisseurs de police</li>
+                        <li>✓ Arrondissez les coins avec <code class="bg-gray-100 px-2 py-1 rounded">rounded-*</code></li>
+                        <li>✓ Ajoutez une ombre avec <code class="bg-gray-100 px-2 py-1 rounded">shadow-*</code></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Solution Example -->
+            <div class="mt-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Exemple de solution:</h3>
+                
+                <!-- Profile Card Example -->
+                <div class="max-w-sm mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-32"></div>
+                    <div class="px-6 pb-6">
+                        <div class="flex justify-center -mt-16 mb-4">
+                            <div class="bg-white rounded-full p-2 shadow-xl">
+                                <div class="bg-gradient-to-br from-purple-400 to-pink-400 rounded-full w-24 h-24 flex items-center justify-center text-white text-4xl font-bold">
+                                    JD
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-1">Jean Dupont</h2>
+                            <p class="text-gray-500 mb-4">Développeur Full-Stack</p>
+                            <p class="text-sm text-gray-600 mb-6">
+                                Passionné par le développement web et les nouvelles technologies. 
+                                Expert en React, Node.js et Tailwind CSS.
+                            </p>
+                            <div class="flex justify-center gap-4">
+                                <button class="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition">
+                                    Suivre
+                                </button>
+                                <button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
+                                    Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code -->
+                <details class="mt-6 bg-gray-800 rounded-lg">
+                    <summary class="cursor-pointer p-4 text-white font-semibold hover:bg-gray-700 transition">
+                        👁️ Voir le code
+                    </summary>
+                    <pre class="p-4 text-gray-300 text-sm overflow-x-auto"><code>&lt;div class="max-w-sm mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden"&gt;
+    &lt;div class="bg-gradient-to-r from-purple-500 to-pink-500 h-32"&gt;&lt;/div&gt;
+    &lt;div class="px-6 pb-6"&gt;
+        &lt;div class="flex justify-center -mt-16 mb-4"&gt;
+            &lt;div class="bg-white rounded-full p-2 shadow-xl"&gt;
+                &lt;div class="bg-gradient-to-br from-purple-400 to-pink-400 rounded-full w-24 h-24 flex items-center justify-center text-white text-4xl font-bold"&gt;
+                    JD
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="text-center"&gt;
+            &lt;h2 class="text-2xl font-bold text-gray-800 mb-1"&gt;Jean Dupont&lt;/h2&gt;
+            &lt;p class="text-gray-500 mb-4"&gt;Développeur Full-Stack&lt;/p&gt;
+            &lt;p class="text-sm text-gray-600 mb-6"&gt;
+                Passionné par le développement web et les nouvelles technologies. 
+                Expert en React, Node.js et Tailwind CSS.
+            &lt;/p&gt;
+            &lt;div class="flex justify-center gap-4"&gt;
+                &lt;button class="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-600 transition"&gt;
+                    Suivre
+                &lt;/button&gt;
+                &lt;button class="bg-gray-100 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"&gt;
+                    Message
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </details>
+            </div>
+        </section>
+
+        <!-- Quick Reference -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">📚 Référence Rapide</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Bordures</h3>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">border</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">border-2, border-4, border-8</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">rounded, rounded-lg, rounded-full</code>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Ombres</h3>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">shadow-sm</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">shadow (défaut)</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">shadow-lg, shadow-xl, shadow-2xl</code>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Opacité</h3>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">opacity-0 (invisible)</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">opacity-50 (50%)</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">opacity-100 (visible)</code>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">Largeur/Hauteur</h3>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">w-full, h-full (100%)</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">w-1/2, w-1/3, w-1/4 (fractions)</code>
+                    <code class="block bg-gray-100 p-2 rounded mb-2">w-64, h-32 (tailles fixes)</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary & Next Steps -->
+        <section class="mb-8">
+            <div class="bg-gradient-to-r from-green-400 to-blue-500 rounded-xl p-8 text-white">
+                <h2 class="text-3xl font-bold mb-4">🎉 Félicitations!</h2>
+                <p class="text-lg mb-6">
+                    Vous maîtrisez maintenant les fondamentaux de Tailwind CSS. Vous pouvez créer des designs 
+                    avec des couleurs, de l'espacement et de la typographie.
+                </p>
+                <a href="02-layout.html" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+                    Prochain cours: Layout avec Flexbox et Grid →
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">Tutoriel Tailwind CSS - Lesson 01</p>
+        </div>
+    </footer>
+
+</body>
+</html>

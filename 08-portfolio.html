@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Portfolio Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Hero Section with Animation -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-pink-900/20"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 animate-fade-in-up">
+            <div class="mb-6">
+                <span class="text-purple-400 text-sm font-semibold tracking-widest uppercase">Designer & Développeur</span>
+            </div>
+            <h1 class="text-7xl md:text-9xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
+                Sophie Laurent
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Créatrice d'expériences digitales uniques et mémorables
+            </p>
+            <div class="flex gap-4 justify-center">
+                <button class="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition">
+                    Voir mes projets
+                </button>
+                <button class="border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition">
+                    Me contacter
+                </button>
+            </div>
+            <a href="index.html" class="block mt-8 text-sm text-purple-400 hover:text-purple-300">← Retour au menu</a>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="text-4xl">↓</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-32 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6">À propos</h2>
+                    <div class="space-y-4 text-gray-300 text-lg leading-relaxed">
+                        <p>
+                            Je suis une designer passionnée par la création d'expériences digitales 
+                            qui allient esthétique et fonctionnalité.
+                        </p>
+                        <p>
+                            Avec 8 ans d'expérience, j'ai eu le privilège de travailler avec des 
+                            startups innovantes et des marques établies pour donner vie à leurs visions.
+                        </p>
+                        <p>
+                            Ma philosophie: Le design n'est pas seulement ce à quoi ça ressemble, 
+                            c'est comment ça fonctionne.
+                        </p>
+                    </div>
+                    <div class="flex gap-6 mt-8">
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-xl">
+                            🔗
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-xl">
+                            📧
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition text-xl">
+                            📸
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative">
+                        <div class="aspect-square rounded-3xl bg-gradient-to-br from-purple-500 to-pink-500 p-1">
+                            <div class="w-full h-full rounded-3xl bg-black flex items-center justify-center text-8xl">
+                                👩‍🎨
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl flex items-center justify-center text-4xl">
+                            ✨
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-32 px-4 bg-white/5">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-bold text-center mb-16">Compétences</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition">
+                    <div class="text-5xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-bold mb-4">Design UI/UX</h3>
+                    <p class="text-gray-400">
+                        Figma, Adobe XD, Sketch, prototypage, systèmes de design
+                    </p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold mb-4">Développement</h3>
+                    <p class="text-gray-400">
+                        HTML, CSS, JavaScript, React, Tailwind CSS, animations
+                    </p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/10 transition">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-bold mb-4">Stratégie</h3>
+                    <p class="text-gray-400">
+                        UX Research, wireframing, architecture de l'information
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-32 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-bold text-center mb-16">Projets Sélectionnés</h2>
+            
+            <div class="space-y-24">
+                <!-- Project 1 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="aspect-video rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 p-1">
+                        <div class="w-full h-full rounded-2xl bg-black flex items-center justify-center text-6xl">
+                            🏪
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-purple-400 font-semibold mb-2">E-commerce Platform</div>
+                        <h3 class="text-3xl font-bold mb-4">ShopFlow</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Refonte complète d'une plateforme e-commerce avec focus sur l'expérience 
+                            mobile et l'optimisation du tunnel de conversion. +45% de conversions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">UI/UX</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Mobile-First</span>
+                        </div>
+                        <button class="text-purple-400 font-semibold hover:text-purple-300 transition">
+                            Voir le projet →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2 aspect-video rounded-2xl bg-gradient-to-br from-pink-500 to-orange-500 p-1">
+                        <div class="w-full h-full rounded-2xl bg-black flex items-center justify-center text-6xl">
+                            📱
+                        </div>
+                    </div>
+                    <div class="md:order-1">
+                        <div class="text-pink-400 font-semibold mb-2">Application Mobile</div>
+                        <h3 class="text-3xl font-bold mb-4">FitTrack Pro</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Application de fitness avec suivi personnalisé, communauté sociale 
+                            et gamification. Plus de 100k utilisateurs actifs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">iOS/Android</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">UI Design</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Prototyping</span>
+                        </div>
+                        <button class="text-pink-400 font-semibold hover:text-pink-300 transition">
+                            Voir le projet →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="aspect-video rounded-2xl bg-gradient-to-br from-green-500 to-teal-500 p-1">
+                        <div class="w-full h-full rounded-2xl bg-black flex items-center justify-center text-6xl">
+                            🌱
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-green-400 font-semibold mb-2">SaaS Platform</div>
+                        <h3 class="text-3xl font-bold mb-4">GreenDash</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Dashboard analytics pour entreprises écologiques. Design system complet 
+                            et interface data-driven innovante.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Dashboard</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Data Viz</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Design System</span>
+                        </div>
+                        <button class="text-green-400 font-semibold hover:text-green-300 transition">
+                            Voir le projet →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-32 px-4 bg-white/5">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-bold text-center mb-16">Ce qu'ils disent</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-2xl">
+                            👨‍💼
+                        </div>
+                        <div>
+                            <div class="font-bold">Marc Dubois</div>
+                            <div class="text-sm text-gray-400">CEO, TechCorp</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Sophie a transformé notre vision en une interface exceptionnelle. 
+                        Son attention aux détails et sa créativité ont dépassé toutes nos attentes."
+                    </p>
+                </div>
+                <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-8">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-500 to-orange-500 flex items-center justify-center text-2xl">
+                            👩‍💼
+                        </div>
+                        <div>
+                            <div class="font-bold">Julie Martin</div>
+                            <div class="text-sm text-gray-400">Product Manager, StartupX</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Travailler avec Sophie a été un vrai plaisir. Elle comprend parfaitement 
+                        les besoins utilisateurs et sait les traduire en solutions élégantes."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-32 px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">
+                Travaillons ensemble
+            </h2>
+            <p class="text-xl text-gray-400 mb-12">
+                Vous avez un projet en tête? Discutons-en autour d'un café (virtuel ou réel)
+            </p>
+            <button class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-12 py-5 rounded-full text-lg font-bold hover:from-purple-600 hover:to-pink-600 transition shadow-2xl">
+                Démarrer un projet
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-white/10">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-gray-400">
+                    © 2024 Sophie Laurent. Designed with ❤️
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Dribbble</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Behance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

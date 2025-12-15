@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - E-commerce Product Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Sora', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    ShopStyle
+                </div>
+                <div class="hidden md:flex gap-8 text-gray-700">
+                    <a href="#" class="hover:text-purple-600">Nouveautés</a>
+                    <a href="#" class="hover:text-purple-600">Femmes</a>
+                    <a href="#" class="hover:text-purple-600">Hommes</a>
+                    <a href="#" class="hover:text-purple-600">Accessoires</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="relative p-2 hover:bg-gray-100 rounded-lg">
+                        <span class="text-2xl">🛒</span>
+                        <span class="absolute -top-1 -right-1 bg-purple-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
+                            3
+                        </span>
+                    </button>
+                    <a href="index.html" class="text-sm text-purple-600 hover:text-purple-700">← Menu</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            
+            <!-- Product Images -->
+            <div>
+                <!-- Main Image -->
+                <div class="bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 rounded-2xl mb-4 aspect-square flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-sm">
+                        -30%
+                    </div>
+                    <div class="text-center text-gray-400">
+                        <div class="text-8xl mb-4">👗</div>
+                        <p class="text-xl font-semibold">Image produit principale</p>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Gallery -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gradient-to-br from-purple-200 to-pink-200 rounded-lg cursor-pointer border-2 border-purple-500"></div>
+                    <div class="aspect-square bg-gradient-to-br from-blue-200 to-cyan-200 rounded-lg cursor-pointer hover:border-2 hover:border-purple-500"></div>
+                    <div class="aspect-square bg-gradient-to-br from-pink-200 to-rose-200 rounded-lg cursor-pointer hover:border-2 hover:border-purple-500"></div>
+                    <div class="aspect-square bg-gradient-to-br from-indigo-200 to-purple-200 rounded-lg cursor-pointer hover:border-2 hover:border-purple-500"></div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div>
+                <!-- Breadcrumb -->
+                <div class="text-sm text-gray-600 mb-4">
+                    <a href="#" class="hover:text-purple-600">Accueil</a>
+                    <span class="mx-2">›</span>
+                    <a href="#" class="hover:text-purple-600">Femmes</a>
+                    <span class="mx-2">›</span>
+                    <span class="text-gray-900">Robes</span>
+                </div>
+
+                <!-- Product Title -->
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                    Robe Élégante Collection Été
+                </h1>
+
+                <!-- Rating -->
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="flex text-yellow-400 text-xl">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+                    <span class="text-gray-600">(148 avis)</span>
+                    <span class="text-purple-600 font-semibold cursor-pointer hover:underline">
+                        Lire les avis
+                    </span>
+                </div>
+
+                <!-- Price -->
+                <div class="mb-6">
+                    <div class="flex items-baseline gap-4">
+                        <span class="text-5xl font-bold text-gray-900">89,99€</span>
+                        <span class="text-2xl text-gray-400 line-through">129,99€</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-bold">
+                            Économisez 40€
+                        </span>
+                    </div>
+                    <p class="text-green-600 font-semibold mt-2">✓ En stock - Livraison gratuite</p>
+                </div>
+
+                <!-- Description -->
+                <div class="mb-8 pb-8 border-b">
+                    <p class="text-gray-700 leading-relaxed">
+                        Cette magnifique robe allie élégance et confort. Parfaite pour toutes les occasions, 
+                        elle est confectionnée dans un tissu léger et respirant. Coupe moderne et flatteuse 
+                        qui met en valeur votre silhouette.
+                    </p>
+                </div>
+
+                <!-- Color Selection -->
+                <div class="mb-6">
+                    <h3 class="font-bold text-gray-900 mb-3">Couleur: <span class="text-purple-600">Violet</span></h3>
+                    <div class="flex gap-3">
+                        <button class="w-12 h-12 rounded-full bg-purple-500 border-4 border-purple-600 shadow-lg"></button>
+                        <button class="w-12 h-12 rounded-full bg-pink-500 border-2 border-gray-300 hover:border-purple-600 transition"></button>
+                        <button class="w-12 h-12 rounded-full bg-blue-500 border-2 border-gray-300 hover:border-purple-600 transition"></button>
+                        <button class="w-12 h-12 rounded-full bg-black border-2 border-gray-300 hover:border-purple-600 transition"></button>
+                    </div>
+                </div>
+
+                <!-- Size Selection -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-bold text-gray-900">Taille</h3>
+                        <a href="#" class="text-sm text-purple-600 hover:underline">Guide des tailles</a>
+                    </div>
+                    <div class="grid grid-cols-5 gap-3">
+                        <button class="border-2 border-gray-300 rounded-lg py-3 hover:border-purple-600 hover:bg-purple-50 transition font-semibold">
+                            XS
+                        </button>
+                        <button class="border-2 border-gray-300 rounded-lg py-3 hover:border-purple-600 hover:bg-purple-50 transition font-semibold">
+                            S
+                        </button>
+                        <button class="border-2 border-purple-600 bg-purple-50 rounded-lg py-3 font-semibold text-purple-600">
+                            M
+                        </button>
+                        <button class="border-2 border-gray-300 rounded-lg py-3 hover:border-purple-600 hover:bg-purple-50 transition font-semibold">
+                            L
+                        </button>
+                        <button class="border-2 border-gray-300 rounded-lg py-3 hover:border-purple-600 hover:bg-purple-50 transition font-semibold">
+                            XL
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="mb-8">
+                    <h3 class="font-bold text-gray-900 mb-3">Quantité</h3>
+                    <div class="flex items-center gap-3">
+                        <button class="w-12 h-12 border-2 border-gray-300 rounded-lg font-bold hover:bg-gray-50 transition">
+                            -
+                        </button>
+                        <input type="number" value="1" class="w-20 h-12 border-2 border-gray-300 rounded-lg text-center font-semibold">
+                        <button class="w-12 h-12 border-2 border-gray-300 rounded-lg font-bold hover:bg-gray-50 transition">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl">
+                        Ajouter au panier
+                    </button>
+                    <button class="bg-pink-600 hover:bg-pink-700 text-white py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl">
+                        Acheter maintenant
+                    </button>
+                </div>
+
+                <!-- Features -->
+                <div class="bg-gray-100 rounded-xl p-6 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🚚</span>
+                        <div>
+                            <div class="font-semibold text-gray-900">Livraison gratuite</div>
+                            <div class="text-sm text-gray-600">Pour toute commande de plus de 50€</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">↩️</span>
+                        <div>
+                            <div class="font-semibold text-gray-900">Retours gratuits</div>
+                            <div class="text-sm text-gray-600">Sous 30 jours</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl">🔒</span>
+                        <div>
+                            <div class="font-semibold text-gray-900">Paiement sécurisé</div>
+                            <div class="text-sm text-gray-600">Vos données sont protégées</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Vous aimerez aussi</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 relative overflow-hidden">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
+                            Nouveau
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 mb-1">Robe d'été</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-xs text-gray-600">(24)</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-purple-600">79,99€</span>
+                            <span class="text-sm text-gray-400 line-through">99,99€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-pink-100 to-rose-100"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 mb-1">Top élégant</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-xs text-gray-600">(18)</span>
+                        </div>
+                        <div class="text-xl font-bold text-purple-600">49,99€</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-green-100 to-teal-100"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 mb-1">Pantalon chic</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐☆</div>
+                            <span class="text-xs text-gray-600">(32)</span>
+                        </div>
+                        <div class="text-xl font-bold text-purple-600">69,99€</div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-square bg-gradient-to-br from-orange-100 to-amber-100"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 mb-1">Veste tendance</h3>
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="flex text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+                            <span class="text-xs text-gray-600">(41)</span>
+                        </div>
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-xl font-bold text-purple-600">119,99€</span>
+                            <span class="text-sm text-gray-400 line-through">149,99€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 mb-4">© 2024 ShopStyle. Tous droits réservés.</p>
+            <a href="index.html" class="text-purple-400 hover:text-purple-300">← Retour au menu du tutoriel</a>
+        </div>
+    </footer>
+
+</body>
+</html>

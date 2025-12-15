@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS - Tutoriel Complet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Space Grotesk', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-6xl font-display font-bold text-white mb-4 animate-pulse">
+                Tailwind CSS
+            </h1>
+            <p class="text-xl text-purple-200 font-body">
+                Tutoriel Complet - De Débutant à Avancé
+            </p>
+            <div class="mt-8 inline-block">
+                <div class="bg-white/10 backdrop-blur-lg rounded-lg px-6 py-3 border border-white/20">
+                    <p class="text-sm text-purple-200">
+                        🎓 Conçu pour les étudiants de 3ème année - Web Design
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Course Structure -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            
+            <!-- Level 1: Fondamentaux -->
+            <div class="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-display font-bold text-white">Niveau 1</h2>
+                    <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs text-white">Débutant</span>
+                </div>
+                <p class="text-emerald-50 mb-6 text-sm">Maîtrisez les fondamentaux de Tailwind CSS</p>
+                <div class="space-y-3">
+                    <a href="01-basics.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">01 - Les Bases</h3>
+                        <p class="text-xs text-emerald-100">Classes utilitaires, couleurs, espacements</p>
+                    </a>
+                    <a href="02-layout.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">02 - Layout</h3>
+                        <p class="text-xs text-emerald-100">Flexbox, Grid, positionnement</p>
+                    </a>
+                    <a href="03-responsive.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">03 - Responsive Design</h3>
+                        <p class="text-xs text-emerald-100">Breakpoints, mobile-first approach</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Level 2: Intermédiaire -->
+            <div class="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-display font-bold text-white">Niveau 2</h2>
+                    <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs text-white">Intermédiaire</span>
+                </div>
+                <p class="text-blue-50 mb-6 text-sm">Créez des composants et interfaces complexes</p>
+                <div class="space-y-3">
+                    <a href="04-components.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">04 - Composants</h3>
+                        <p class="text-xs text-blue-100">Cards, buttons, forms, navigation</p>
+                    </a>
+                    <a href="05-landing-page.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">05 - Landing Page</h3>
+                        <p class="text-xs text-blue-100">Projet complet - Page d'accueil</p>
+                    </a>
+                    <a href="06-dashboard.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">06 - Dashboard</h3>
+                        <p class="text-xs text-blue-100">Interface d'administration</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Level 3: Avancé -->
+            <div class="bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-2xl font-display font-bold text-white">Niveau 3</h2>
+                    <span class="bg-white/20 backdrop-blur px-3 py-1 rounded-full text-xs text-white">Avancé</span>
+                </div>
+                <p class="text-rose-50 mb-6 text-sm">Animations, customisation, projets avancés</p>
+                <div class="space-y-3">
+                    <a href="07-ecommerce.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">07 - E-commerce</h3>
+                        <p class="text-xs text-rose-100">Page produit interactive</p>
+                    </a>
+                    <a href="08-portfolio.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">08 - Portfolio</h3>
+                        <p class="text-xs text-rose-100">Site portfolio avec animations</p>
+                    </a>
+                    <a href="09-advanced.html" class="block bg-white/10 hover:bg-white/20 backdrop-blur rounded-lg p-4 transition-all">
+                        <h3 class="font-semibold text-white mb-1">09 - Techniques Avancées</h3>
+                        <p class="text-xs text-rose-100">Custom config, plugins, optimisation</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Start Guide -->
+        <div class="mt-16 max-w-4xl mx-auto">
+            <div class="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+                <h2 class="text-3xl font-display font-bold text-white mb-6">🚀 Comment Commencer</h2>
+                <div class="space-y-4 text-purple-100">
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold">1</span>
+                        <div>
+                            <p class="font-semibold text-white">Ouvrez les fichiers directement dans votre navigateur</p>
+                            <p class="text-sm text-purple-200">Chaque fichier HTML est autonome et fonctionne sans installation</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">2</span>
+                        <div>
+                            <p class="font-semibold text-white">Suivez l'ordre progressif</p>
+                            <p class="text-sm text-purple-200">Commencez par le niveau 1 et progressez vers les niveaux avancés</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold">3</span>
+                        <div>
+                            <p class="font-semibold text-white">Expérimentez avec le code</p>
+                            <p class="text-sm text-purple-200">Modifiez les exemples, testez de nouvelles classes, créez vos propres designs</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold">4</span>
+                        <div>
+                            <p class="font-semibold text-white">Complétez les exercices</p>
+                            <p class="text-sm text-purple-200">Chaque leçon contient des exercices pratiques pour renforcer vos compétences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="mt-12 text-center">
+            <h3 class="text-2xl font-display font-bold text-white mb-6">📚 Ressources Complémentaires</h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://tailwindcss.com/docs" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur px-6 py-3 rounded-lg text-white transition-all border border-white/20">
+                    Documentation Officielle
+                </a>
+                <a href="https://tailwindui.com/components" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur px-6 py-3 rounded-lg text-white transition-all border border-white/20">
+                    Tailwind UI Components
+                </a>
+                <a href="https://play.tailwindcss.com/" target="_blank" class="bg-white/10 hover:bg-white/20 backdrop-blur px-6 py-3 rounded-lg text-white transition-all border border-white/20">
+                    Playground Tailwind
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-purple-300 text-sm">
+        <p>Créé avec ❤️ pour les étudiants en Web Design</p>
+        <p class="mt-2">© 2024 - Tutoriel Tailwind CSS Complet</p>
+    </footer>
+
+</body>
+</html>

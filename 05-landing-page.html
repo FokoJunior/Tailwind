@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Landing Page Projet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Archivo', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Navigation fixe en haut -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-lg shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-sm text-blue-600 hover:text-blue-800 font-semibold">← Retour au menu</a>
+            <div class="font-bold text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                TechStart
+            </div>
+            <div class="hidden md:flex gap-8">
+                <a href="#features" class="text-gray-700 hover:text-blue-600 font-medium">Fonctionnalités</a>
+                <a href="#pricing" class="text-gray-700 hover:text-blue-600 font-medium">Tarifs</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+                Commencer
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block mb-6">
+                    <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+                        🚀 Nouveau: Version 2.0 disponible
+                    </span>
+                </div>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 mb-6 leading-tight">
+                    La plateforme qui
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        transforme
+                    </span>
+                    votre business
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto">
+                    Automatisez vos processus, augmentez votre productivité et développez votre entreprise avec notre solution tout-en-un.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition shadow-lg hover:shadow-xl">
+                        Essai gratuit 14 jours
+                    </button>
+                    <button class="bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-lg text-lg font-bold transition border-2 border-gray-200">
+                        Voir la démo
+                    </button>
+                </div>
+                <p class="mt-6 text-sm text-gray-500">
+                    ✓ Aucune carte bancaire requise  ✓ Configuration en 2 minutes  ✓ Support 24/7
+                </p>
+            </div>
+
+            <!-- Hero Image Placeholder -->
+            <div class="mt-16 max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-2xl shadow-2xl p-2">
+                    <div class="bg-white rounded-xl overflow-hidden">
+                        <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                            <div class="text-center text-gray-400">
+                                <div class="text-6xl mb-4">🖥️</div>
+                                <p class="text-xl font-semibold">Interface de l'application</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Tout ce dont vous avez besoin
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Des fonctionnalités puissantes pour faire passer votre entreprise au niveau supérieur
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6">
+                        ⚡
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Ultra-rapide</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Performance optimale avec un temps de chargement inférieur à 1 seconde grâce à notre infrastructure cloud.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-3xl mb-6">
+                        🛡️
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">100% Sécurisé</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Vos données sont protégées avec un chiffrement de niveau bancaire et des sauvegardes quotidiennes.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-3xl mb-6">
+                        📊
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Analytics Avancées</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Visualisez vos données en temps réel avec des tableaux de bord personnalisables et intuitifs.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-3xl mb-6">
+                        🤝
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Travaillez en équipe avec des outils de collaboration en temps réel et un système de permissions.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-3xl mb-6">
+                        🔌
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Intégrations</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Connectez-vous à plus de 100 applications tierces pour automatiser vos workflows.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center text-3xl mb-6">
+                        💬
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Support 24/7</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Notre équipe d'experts est disponible à tout moment pour vous aider à réussir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-5xl font-black mb-2">10K+</div>
+                    <div class="text-blue-100">Clients satisfaits</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black mb-2">99.9%</div>
+                    <div class="text-blue-100">Uptime garanti</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black mb-2">24/7</div>
+                    <div class="text-blue-100">Support disponible</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black mb-2">150+</div>
+                    <div class="text-blue-100">Pays couverts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                    Tarifs transparents
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Choisissez le plan qui correspond à vos besoins
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                    <p class="text-gray-600 mb-6">Pour les petites équipes</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black text-gray-900">19€</span>
+                        <span class="text-gray-600">/mois</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Jusqu'à 5 utilisateurs</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">10 GB de stockage</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Support par email</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-gray-300">✗</span>
+                            <span class="text-gray-400">Intégrations avancées</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold transition">
+                        Commencer
+                    </button>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 text-white transform scale-105 border-4 border-blue-500">
+                    <div class="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold inline-block mb-4">
+                        ⭐ POPULAIRE
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                    <p class="text-blue-100 mb-6">Pour les équipes en croissance</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black">49€</span>
+                        <span class="text-blue-100">/mois</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-300">✓</span>
+                            <span>Utilisateurs illimités</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-300">✓</span>
+                            <span>100 GB de stockage</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-300">✓</span>
+                            <span>Support prioritaire 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-300">✓</span>
+                            <span>Toutes les intégrations</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+                        Commencer maintenant
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                    <p class="text-gray-600 mb-6">Pour les grandes organisations</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-black text-gray-900">Custom</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Tout de Professional</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Stockage illimité</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">Support dédié</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="text-green-500">✓</span>
+                            <span class="text-gray-700">SLA personnalisé</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition">
+                        Nous contacter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Prêt à transformer votre business?
+            </h2>
+            <p class="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
+                Rejoignez des milliers d'entreprises qui ont déjà fait le choix de l'excellence
+            </p>
+            <button class="bg-white text-blue-600 px-10 py-4 rounded-lg text-lg font-bold hover:bg-gray-100 transition shadow-2xl">
+                Commencer gratuitement
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                        TechStart
+                    </h3>
+                    <p class="text-gray-400">
+                        La plateforme qui transforme votre business.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Produit</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Fonctionnalités</a></li>
+                        <li><a href="#" class="hover:text-white transition">Tarifs</a></li>
+                        <li><a href="#" class="hover:text-white transition">Sécurité</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Entreprise</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">À propos</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Carrières</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Centre d'aide</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>© 2024 TechStart. Tous droits réservés.</p>
+                <div class="mt-4">
+                    <a href="index.html" class="text-blue-400 hover:text-blue-300">← Retour au menu du tutoriel</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

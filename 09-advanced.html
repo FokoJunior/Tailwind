@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Techniques Avancées</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            900: '#1e3a8a',
+                        },
+                        custom: '#FF6B9D'
+                    },
+                    fontFamily: {
+                        custom: ['Comic Sans MS', 'cursive']
+                    },
+                    spacing: {
+                        '128': '32rem',
+                        '144': '36rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white" style="font-family: 'Fira Code', monospace;">
+
+    <nav class="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-blue-400 hover:text-blue-300">← Menu Principal</a>
+            <h1 class="text-xl font-bold">09 - Techniques Avancées</h1>
+            <div class="text-green-400">Level: Expert 🚀</div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+
+        <!-- Introduction -->
+        <section class="mb-16">
+            <h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Techniques Avancées Tailwind CSS
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                Découvrez les fonctionnalités avancées de Tailwind: customisation, états interactifs, 
+                animations complexes et optimisations.
+            </p>
+        </section>
+
+        <!-- Custom Configuration -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-blue-400">1. Configuration Personnalisée</h2>
+            
+            <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                <h3 class="font-bold mb-4 text-lg">Couleurs personnalisées</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-brand-50 text-gray-900 p-4 rounded text-center font-semibold">brand-50</div>
+                    <div class="bg-brand-100 text-gray-900 p-4 rounded text-center font-semibold">brand-100</div>
+                    <div class="bg-brand-500 text-white p-4 rounded text-center font-semibold">brand-500</div>
+                    <div class="bg-brand-900 text-white p-4 rounded text-center font-semibold">brand-900</div>
+                </div>
+                <div class="bg-custom text-white p-4 rounded text-center font-semibold mb-4">
+                    Couleur custom: #FF6B9D
+                </div>
+                <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto text-green-400"><code>tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { 50: '#eff6ff', 500: '#3b82f6', ... },
+        custom: '#FF6B9D'
+      }
+    }
+  }
+}</code></pre>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="font-bold mb-4 text-lg">Espacements personnalisés</h3>
+                <div class="space-y-4 mb-4">
+                    <div class="bg-purple-500 h-128 w-full rounded flex items-center justify-center">
+                        h-128 (32rem = 512px)
+                    </div>
+                </div>
+                <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto text-green-400"><code>spacing: {
+  '128': '32rem',
+  '144': '36rem'
+}</code></pre>
+            </div>
+        </section>
+
+        <!-- Advanced States -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-purple-400">2. États Interactifs Avancés</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Hover Effects -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="font-bold mb-4">Effets au survol</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-600 hover:bg-blue-500 hover:scale-105 hover:rotate-2 transition-all p-4 rounded cursor-pointer">
+                            hover:scale + rotate
+                        </div>
+                        <div class="relative group cursor-pointer">
+                            <div class="bg-purple-600 p-4 rounded group-hover:translate-x-2 transition">
+                                Group hover parent
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-pink-500 to-purple-500 opacity-0 group-hover:opacity-20 rounded transition"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Focus States -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="font-bold mb-4">États focus</h3>
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Focus me!" 
+                               class="w-full bg-gray-700 border-2 border-gray-600 rounded p-3 
+                                      focus:border-blue-500 focus:ring-4 focus:ring-blue-500/50 
+                                      focus:scale-105 transition-all outline-none">
+                        <button class="w-full bg-green-600 p-3 rounded 
+                                       focus:ring-4 focus:ring-green-500/50 
+                                       focus:outline-none transition">
+                            Focus visible
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active States -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="font-bold mb-4">États actifs</h3>
+                    <button class="w-full bg-pink-600 hover:bg-pink-500 active:bg-pink-700 active:scale-95 transition p-4 rounded">
+                        Click me! (active:scale-95)
+                    </button>
+                </div>
+
+                <!-- Disabled States -->
+                <div class="bg-gray-800 rounded-lg p-6">
+                    <h3 class="font-bold mb-4">États désactivés</h3>
+                    <button disabled class="w-full bg-gray-600 p-4 rounded disabled:opacity-50 disabled:cursor-not-allowed">
+                        Button désactivé
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animations -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-pink-400">3. Animations</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="mb-4 text-4xl animate-spin inline-block">⚙️</div>
+                    <code class="text-sm">animate-spin</code>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="mb-4 text-4xl animate-bounce inline-block">🏀</div>
+                    <code class="text-sm">animate-bounce</code>
+                </div>
+                <div class="bg-gray-800 rounded-lg p-6 text-center">
+                    <div class="mb-4 text-4xl animate-pulse inline-block">💓</div>
+                    <code class="text-sm">animate-pulse</code>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-gray-800 rounded-lg p-6">
+                <h3 class="font-bold mb-4">Transition personnalisée</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded 
+                                hover:from-purple-500 hover:to-pink-500 
+                                transition-all duration-1000 ease-in-out cursor-pointer">
+                        duration-1000 ease-in-out
+                    </div>
+                    <div class="bg-gradient-to-r from-green-500 to-teal-500 p-4 rounded 
+                                hover:scale-110 hover:rotate-3
+                                transition-all duration-300 delay-100 cursor-pointer">
+                        delay-100
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dark Mode -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-yellow-400">4. Dark Mode</h2>
+            
+            <div class="bg-gray-800 rounded-lg p-6">
+                <div class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-6 rounded-lg mb-4 border border-gray-200 dark:border-gray-700">
+                    <h3 class="font-bold mb-2">Exemple Dark Mode</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Ce texte s'adapte automatiquement au mode sombre si activé dans les préférences système.
+                    </p>
+                </div>
+                <pre class="bg-gray-900 p-4 rounded text-sm overflow-x-auto text-green-400"><code>&lt;div class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"&gt;
+  Contenu adaptatif
+&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Arbitrary Values -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-green-400">5. Valeurs Arbitraires (JIT)</h2>
+            
+            <div class="bg-gray-800 rounded-lg p-6">
+                <div class="space-y-4">
+                    <div class="bg-[#1da1f2] text-white p-4 rounded">
+                        bg-[#1da1f2] - Couleur hexadécimale exacte
+                    </div>
+                    <div class="text-[22px] bg-gray-700 p-4 rounded">
+                        text-[22px] - Taille de texte personnalisée
+                    </div>
+                    <div class="w-[137px] h-[80px] bg-purple-600 rounded flex items-center justify-center">
+                        w-[137px]
+                    </div>
+                    <div class="bg-[url('https://via.placeholder.com/400')] bg-cover bg-center h-32 rounded">
+                        bg-[url(...)]
+                    </div>
+                </div>
+                <pre class="mt-4 bg-gray-900 p-4 rounded text-sm overflow-x-auto text-green-400"><code>&lt;div class="bg-[#1da1f2] text-[22px] w-[137px]"&gt;&lt;/div&gt;</code></pre>
+            </div>
+        </section>
+
+        <!-- Advanced Layouts -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-cyan-400">6. Layouts Avancés</h2>
+            
+            <!-- Asymmetric Grid -->
+            <div class="bg-gray-800 rounded-lg p-6 mb-6">
+                <h3 class="font-bold mb-4">Grille Asymétrique</h3>
+                <div class="grid grid-cols-6 gap-4 mb-4">
+                    <div class="col-span-4 row-span-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg p-6 flex items-center justify-center">
+                        col-span-4 row-span-2
+                    </div>
+                    <div class="col-span-2 bg-pink-500 rounded-lg p-4 flex items-center justify-center">
+                        col-span-2
+                    </div>
+                    <div class="col-span-2 bg-green-500 rounded-lg p-4 flex items-center justify-center">
+                        col-span-2
+                    </div>
+                    <div class="col-span-3 bg-orange-500 rounded-lg p-4 flex items-center justify-center">
+                        col-span-3
+                    </div>
+                    <div class="col-span-3 bg-teal-500 rounded-lg p-4 flex items-center justify-center">
+                        col-span-3
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aspect Ratio -->
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="font-bold mb-4">Ratios d'aspect</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="aspect-square bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center">
+                        aspect-square
+                    </div>
+                    <div class="aspect-video bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center">
+                        aspect-video
+                    </div>
+                    <div class="aspect-[4/3] bg-gradient-to-br from-pink-400 to-pink-600 rounded-lg flex items-center justify-center">
+                        aspect-[4/3]
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Tips -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6 text-orange-400">7. Optimisation & Best Practices</h2>
+            
+            <div class="bg-gray-800 rounded-lg p-6">
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-green-400">✅ Bonnes Pratiques</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 flex-shrink-0">→</span>
+                                Utiliser @apply avec modération (seulement pour les composants réutilisés)
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 flex-shrink-0">→</span>
+                                Purger le CSS inutilisé en production
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 flex-shrink-0">→</span>
+                                Utiliser les classes utility directement dans le HTML
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-400 flex-shrink-0">→</span>
+                                Créer des composants réutilisables avec des patterns de classes cohérents
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-bold text-lg mb-2 text-red-400">❌ À Éviter</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 flex-shrink-0">→</span>
+                                Créer des classes CSS personnalisées pour tout
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 flex-shrink-0">→</span>
+                                Utiliser !important (privilégier la spécificité des classes)
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-red-400 flex-shrink-0">→</span>
+                                Combiner trop de transformations complexes sans raison
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">📚 Ressources Complémentaires</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="https://tailwindcss.com/docs" target="_blank" 
+                   class="bg-gradient-to-br from-blue-600 to-blue-700 p-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition block">
+                    <h3 class="font-bold text-xl mb-2">Documentation Officielle</h3>
+                    <p class="text-blue-100">La référence complète de toutes les classes Tailwind</p>
+                </a>
+                
+                <a href="https://tailwindui.com" target="_blank"
+                   class="bg-gradient-to-br from-purple-600 to-purple-700 p-6 rounded-lg hover:from-purple-700 hover:to-purple-800 transition block">
+                    <h3 class="font-bold text-xl mb-2">Tailwind UI</h3>
+                    <p class="text-purple-100">Composants premium professionnels</p>
+                </a>
+                
+                <a href="https://play.tailwindcss.com" target="_blank"
+                   class="bg-gradient-to-br from-pink-600 to-pink-700 p-6 rounded-lg hover:from-pink-700 hover:to-pink-800 transition block">
+                    <h3 class="font-bold text-xl mb-2">Tailwind Play</h3>
+                    <p class="text-pink-100">Playground en ligne pour expérimenter</p>
+                </a>
+                
+                <a href="https://headlessui.com" target="_blank"
+                   class="bg-gradient-to-br from-green-600 to-green-700 p-6 rounded-lg hover:from-green-700 hover:to-green-800 transition block">
+                    <h3 class="font-bold text-xl mb-2">Headless UI</h3>
+                    <p class="text-green-100">Composants accessibles non-stylés</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="text-center">
+            <div class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-12">
+                <h2 class="text-4xl font-bold mb-4">🎉 Félicitations!</h2>
+                <p class="text-xl mb-8 text-white/90">
+                    Vous avez complété le tutoriel complet Tailwind CSS!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition">
+                        ← Retour au menu principal
+                    </a>
+                    <a href="01-basics.html" class="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition">
+                        Recommencer le tutoriel
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-gray-800 border-t border-gray-700 py-8 mt-20">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>Tutoriel Tailwind CSS Complet - Niveau Avancé</p>
+            <p class="mt-2">Continuez à pratiquer et à créer des interfaces magnifiques! 🚀</p>
+        </div>
+    </footer>
+
+</body>
+</html>

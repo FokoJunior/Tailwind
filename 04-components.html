@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Composants</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="03-responsive.html" class="text-blue-600 hover:text-blue-800 font-semibold">← Précédent</a>
+            <h1 class="text-xl font-bold text-gray-800">04 - Composants</h1>
+            <a href="05-landing-page.html" class="text-blue-600 hover:text-blue-800 font-semibold">Suivant →</a>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-12 max-w-7xl">
+        
+        <section class="mb-16">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">Bibliothèque de Composants</h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Créez des composants réutilisables et professionnels avec Tailwind CSS.
+            </p>
+        </section>
+
+        <!-- Buttons -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">🔘 Boutons</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Primary Buttons -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="font-bold text-gray-800 mb-4">Boutons Primaires</h3>
+                    <div class="space-y-3">
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                            Bouton Normal
+                        </button>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition shadow-lg">
+                            Avec Ombre
+                        </button>
+                        <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                            Dégradé
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Secondary Buttons -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="font-bold text-gray-800 mb-4">Boutons Secondaires</h3>
+                    <div class="space-y-3">
+                        <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold transition">
+                            Secondaire
+                        </button>
+                        <button class="w-full border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition">
+                            Outline
+                        </button>
+                        <button class="w-full text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition">
+                            Ghost
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sizes -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="font-bold text-gray-800 mb-4">Tailles</h3>
+                    <div class="space-y-3">
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">
+                            Petit
+                        </button>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                            Moyen
+                        </button>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition">
+                            Grand
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">🎴 Cartes</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Simple Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+                    <div class="h-48 bg-gradient-to-br from-pink-400 to-purple-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Carte Simple</h3>
+                        <p class="text-gray-600 mb-4">Description de la carte avec du texte d'exemple.</p>
+                        <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                            En savoir plus
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card with Badge -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-400 to-cyan-500">
+                        <span class="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
+                            Nouveau
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">⭐</span>
+                            <h3 class="text-xl font-bold text-gray-800">Avec Badge</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Cette carte inclut un badge et une icône.</p>
+                        <button class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            Action
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition text-white">
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <h3 class="text-2xl font-bold mb-2">Premium</h3>
+                            <div class="flex items-baseline justify-center gap-1">
+                                <span class="text-5xl font-bold">29€</span>
+                                <span class="text-xl">/mois</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-300">✓</span> Fonctionnalité 1
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-300">✓</span> Fonctionnalité 2
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-green-300">✓</span> Fonctionnalité 3
+                            </li>
+                        </ul>
+                        <button class="w-full bg-white text-purple-600 px-4 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                            Commencer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">📝 Formulaires</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Login Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Formulaire de Connexion</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                            <input type="email" placeholder="vous@exemple.com" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Mot de passe</label>
+                            <input type="password" placeholder="••••••••" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <label class="flex items-center gap-2">
+                                <input type="checkbox" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                <span class="text-sm text-gray-600">Se souvenir</span>
+                            </label>
+                            <a href="#" class="text-sm text-blue-600 hover:text-blue-700">Mot de passe oublié?</a>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Se connecter
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Formulaire de Contact</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nom complet</label>
+                            <input type="text" placeholder="Jean Dupont" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Sujet</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option>Choisissez un sujet</option>
+                                <option>Question générale</option>
+                                <option>Support technique</option>
+                                <option>Partenariat</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" placeholder="Votre message..." 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button class="w-full bg-purple-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts & Notifications -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">🔔 Alertes & Notifications</h2>
+            
+            <div class="space-y-4">
+                <!-- Success -->
+                <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg flex items-center gap-4">
+                    <span class="text-2xl">✅</span>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-green-800">Succès!</h4>
+                        <p class="text-green-700 text-sm">Votre opération a été complétée avec succès.</p>
+                    </div>
+                    <button class="text-green-800 hover:text-green-900">✕</button>
+                </div>
+
+                <!-- Info -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg flex items-center gap-4">
+                    <span class="text-2xl">ℹ️</span>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-blue-800">Information</h4>
+                        <p class="text-blue-700 text-sm">Vous avez 3 nouvelles notifications.</p>
+                    </div>
+                    <button class="text-blue-800 hover:text-blue-900">✕</button>
+                </div>
+
+                <!-- Warning -->
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg flex items-center gap-4">
+                    <span class="text-2xl">⚠️</span>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-yellow-800">Attention!</h4>
+                        <p class="text-yellow-700 text-sm">Cette action nécessite votre attention.</p>
+                    </div>
+                    <button class="text-yellow-800 hover:text-yellow-900">✕</button>
+                </div>
+
+                <!-- Error -->
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg flex items-center gap-4">
+                    <span class="text-2xl">❌</span>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-red-800">Erreur!</h4>
+                        <p class="text-red-700 text-sm">Une erreur s'est produite. Veuillez réessayer.</p>
+                    </div>
+                    <button class="text-red-800 hover:text-red-900">✕</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Badges & Pills -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">🏷️ Badges & Tags</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="font-bold text-gray-800 mb-4">Badges colorés</h3>
+                <div class="flex flex-wrap gap-3 mb-8">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Bleu</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Vert</span>
+                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-semibold">Jaune</span>
+                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold">Rouge</span>
+                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Violet</span>
+                    <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-semibold">Rose</span>
+                </div>
+
+                <h3 class="font-bold text-gray-800 mb-4">Badges avec icônes</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                        ⭐ Premium
+                    </span>
+                    <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                        ✓ Vérifié
+                    </span>
+                    <span class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                        🔥 Trending
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">📑 Onglets de Navigation</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="flex border-b border-gray-200 mb-6">
+                    <button class="px-6 py-3 border-b-2 border-blue-600 text-blue-600 font-semibold">
+                        Aperçu
+                    </button>
+                    <button class="px-6 py-3 border-b-2 border-transparent text-gray-600 hover:text-gray-800">
+                        Spécifications
+                    </button>
+                    <button class="px-6 py-3 border-b-2 border-transparent text-gray-600 hover:text-gray-800">
+                        Avis
+                    </button>
+                </div>
+                <div class="text-gray-600">
+                    <p>Contenu de l'onglet sélectionné...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Card -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">👤 Carte de Profil</h2>
+            
+            <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="relative">
+                    <div class="h-32 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
+                    <div class="absolute -bottom-16 left-1/2 transform -translate-x-1/2">
+                        <div class="bg-white rounded-full p-2 shadow-xl">
+                            <div class="w-32 h-32 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-white text-4xl font-bold">
+                                MR
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-20 pb-8 px-8 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-1">Marie Rodriguez</h3>
+                    <p class="text-gray-600 mb-4">Designer UX/UI</p>
+                    <p class="text-sm text-gray-600 mb-6">
+                        Passionnée par la création d'expériences utilisateur exceptionnelles.
+                    </p>
+                    <div class="flex justify-center gap-4 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-800">245</div>
+                            <div class="text-xs text-gray-600">Projets</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-800">1.2k</div>
+                            <div class="text-xs text-gray-600">Followers</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-800">890</div>
+                            <div class="text-xs text-gray-600">Following</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <button class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                            Suivre
+                        </button>
+                        <button class="flex-1 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                            Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl p-8 text-white">
+                <h2 class="text-3xl font-bold mb-6">🎯 Exercice Final</h2>
+                <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+                    <h3 class="text-xl font-bold mb-4">Créez une carte produit complète</h3>
+                    <p class="mb-4">Votre carte doit inclure:</p>
+                    <ul class="space-y-2">
+                        <li>✓ Une image de produit (gradient de votre choix)</li>
+                        <li>✓ Un badge "Nouveau" ou "Promo"</li>
+                        <li>✓ Le nom du produit et sa description</li>
+                        <li>✓ Le prix avec l'ancien prix barré si promotion</li>
+                        <li>✓ Un bouton "Ajouter au panier"</li>
+                        <li>✓ Des tags/badges pour les catégories</li>
+                        <li>✓ Un effet hover qui transforme la carte</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <div class="bg-gradient-to-r from-green-400 to-blue-500 rounded-xl p-8 text-white">
+                <h2 class="text-3xl font-bold mb-4">🎉 Bravo!</h2>
+                <p class="text-lg mb-6">
+                    Vous avez maintenant une bibliothèque complète de composants réutilisables!
+                </p>
+                <a href="05-landing-page.html" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+                    Prochain cours: Créer une Landing Page complète →
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">Tutoriel Tailwind CSS - Lesson 04</p>
+        </div>
+    </footer>
+
+</body>
+</html>
